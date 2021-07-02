@@ -1,0 +1,27 @@
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+<ion-card>
+  <ion-card-content>
+    <ion-avatar slot="start">
+      <img src="{{ userDetail.avatar }}">
+    </ion-avatar>
+    <ion-card-subtitle>
+      <ion-label>
+        Name :  {{ userDetail.first_name }} {{ userDetail.last_name }}
+      </ion-label>
+    </ion-card-subtitle>
+    <ion-label>Email : {{ userDetail['email'] }}</ion-label>
+  </ion-card-content>
+  <ion-button expand="block"  color="dark" (click)="showalert()">Add</ion-button>
+</ion-card>
+
+</ion-content>
